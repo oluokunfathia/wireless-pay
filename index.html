@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WirelessPay</title>
+
+    <!-- Bootstrap CSS -->
+     <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    > 
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    > 
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#">
+            <span class="logo-icon">
+                <i class="bi bi-wifi"></i>
+            </span>
+            Wireless<span>Pay</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">
+                        Features
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#business">
+                        Business
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <button
+                        class="btn btn-dark rounded-pill px-4"
+                        onclick="openAccount()"
+                    >
+                        Open Account
+                    </button>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero-section" id="home">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- LEFT SIDE -->
+
+            <div class="col-lg-6">
+
+                <div class="hero-badge">
+
+                    <i class="bi bi-lightning-charge-fill"></i>
+
+                    SIMPLE • FAST • SECURE
+
+                </div>
+
+
+                <h1 class="hero-title">
+
+                    Open an account.
+
+                    <br>
+
+                    <span>Save & get a loan.</span>
+
+                </h1>
+
+
+                <p class="hero-text">
+
+                    Manage your personal finances and business
+                    transactions seamlessly in one easy-to-use app.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="btn btn-dark btn-lg rounded-pill px-4"
+                        onclick="openAccount()"
+                    >
+
+                        Open Account
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </button>
+
+
+                    <a
+                        href="#features"
+                        class="btn btn-outline-dark btn-lg rounded-pill px-4"
+                    >
+
+                        Explore Features
+
+                    </a>
+
+                </div>
+
+
+                <!-- APP STORE BUTTONS -->
+
+                <div class="store-buttons">
+
+                    <a
+                        href="#"
+                        class="store-btn"
+                        onclick="downloadApp(event, 'Google Play')"
+                    >
+
+                        <i class="bi bi-google-play"></i>
+
+                        <span>
+
+                            <small>GET IT ON</small>
+
+                            Google Play
+
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="store-btn"
+                        onclick="downloadApp(event, 'App Store')"
+                    >
+
+                        <i class="bi bi-apple"></i>
+
+                        <span>
+
+                            <small>DOWNLOAD ON THE</small>
+
+                            App Store
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="col-lg-6">
+
+                <div class="phone-area">
+
+                    <div class="yellow-shape"></div>
+
+
+                    <!-- BACK PHONE -->
+
+                    <div class="phone phone-back">
+
+                        <div class="phone-camera"></div>
+
+                        <div class="phone-screen">
+
+                            <h6>WirelessPay</h6>
+
+                            <div class="balance-card">
+
+                                <small>
+                                    Available Balance
+                                </small>
+
+                                <h4>
+                                    ₦248,500
+                                </h4>
+
+                            </div>
+
+
+                            <div class="phone-actions">
+
+                                <div>
+                                    <i class="bi bi-send"></i>
+                                    <span>Send</span>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-wallet2"></i>
+                                    <span>Save</span>
+                                </div>
+
+                                <div>
+                                    <i class="bi bi-receipt"></i>
+                                    <span>Pay</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FRONT PHONE -->
+
+                    <div class="phone phone-front">
+
+                        <div class="phone-camera"></div>
+
+                        <div class="phone-screen">
+
+                            <h6>
+                                Good morning 👋
+                            </h6>
+
+                            <small class="text-muted">
+                                Total Balance
+                            </small>
+
+                            <h3>
+                                ₦420,850.00
+                            </h3>
+
+
+                            <div class="transaction">
+
+                                <span>
+                                    <i class="bi bi-arrow-down-left"></i>
+                                    Income
+                                </span>
+
+                                <strong>
+                                    +₦85,000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="transaction">
+
+                                <span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                    Expenses
+                                </span>
+
+                                <strong>
+                                    -₦24,500
+                                </strong>
+
+                            </div>
+
+
+                            <button class="mini-btn">
+                                View Transactions
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FLOATING CARD -->
+
+                    <div class="person-card">
+
+                        <div class="person-avatar">
+                            W
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Everything in one app
+                            </strong>
+
+                            <small>
+                                Bank • Save • Pay • Loan
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section
+    class="features-section py-5"
+    id="features"
+>
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-label">
+                WHAT WE OFFER
+            </span>
+
+            <h2 class="section-title">
+                Financial tools made simple
+            </h2>
+
+            <p class="text-muted">
+                Everything you need to manage your money
+                from one place.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- FEATURE 1 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-phone"></i>
+
+                    </div>
+
+                    <h5>
+                        Mobile Banking
+                    </h5>
+
+                    <p>
+                        Check balances, transfer money
+                        and manage your account easily.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEATURE 2 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-piggy-bank"></i>
+
+                    </div>
+
+                    <h5>
+                        Save Money
+                    </h5>
+
+                    <p>
+                        Create savings goals and keep
+                        track of your progress.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEATURE 3 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-cash-stack"></i>
+
+                    </div>
+
+                    <h5>
+                        Quick Loans
+                    </h5>
+
+                    <p>
+                        Apply for eligible financial
+                        support directly from the app.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEATURE 4 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-shop"></i>
+
+                    </div>
+
+                    <h5>
+                        For Business
+                    </h5>
+
+                    <p>
+                        Accept payments and manage
+                        your business transactions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BUSINESS ================= -->
+
+<section
+    class="business-section py-5"
+    id="business"
+>
+
+    <div class="container">
+
+        <div class="business-box">
+
+            <div>
+
+                <span class="section-label">
+                    OPEN FOR BUSINESS
+                </span>
+
+                <h2>
+                    One platform for your business.
+                </h2>
+
+                <p>
+                    Receive payments, monitor transactions
+                    and keep your business finances organized
+                    from one dashboard.
+                </p>
+
+                <button
+                    class="btn btn-light rounded-pill px-4"
+                    onclick="businessMessage()"
+                >
+                    Get Started
+                </button>
+
+            </div>
+
+
+            <div class="business-icons">
+
+                <div>
+                    <i class="bi bi-credit-card"></i>
+                </div>
+
+                <div>
+                    <i class="bi bi-bar-chart"></i>
+                </div>
+
+                <div>
+                    <i class="bi bi-qr-code"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer
+    class="footer py-4"
+    id="about"
+>
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <h5>
+                    WirelessPay
+                </h5>
+
+                <small>
+                    © <span id="year"></span>
+                    WirelessPay.
+                    All rights reserved.
+                </small>
+
+            </div>
+
+
+            <div class="col-md-6 text-md-end">
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= ACCOUNT MODAL ================= -->
+
+<div
+    class="modal fade"
+    id="accountModal"
+    tabindex="-1"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content rounded-4">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Open an Account
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <form id="accountForm">
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            placeholder="Enter phone number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-dark w-100 rounded-pill"
+                    >
+
+                        Continue
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JavaScript -->
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
